@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "export PATH=$PATH:$PWD/node_modules/.bin && tsc && vite build",
+    "build": "vite build", 
     "preview": "vite preview"
   },
   "keywords": [],
