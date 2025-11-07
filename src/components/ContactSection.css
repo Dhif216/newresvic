@@ -1,0 +1,108 @@
+.contact-section {
+    padding: 100px 40px;
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 3rem;
+    color: var(--dark-text);
+    margin-bottom: 10px;
+}
+
+.section-subheading {
+    font-size: 1.2rem;
+    color: var(--light-text);
+    margin-bottom: 60px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Info on left, Map wider on right */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    text-align: left;
+}
+
+.contact-info-card {
+    background-color: var(--white);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.contact-info-card p {
+    font-size: 1rem;
+    color: var(--dark-text);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.contact-info-card .hours {
+    font-weight: 600;
+    margin-top: 20px;
+    color: var(--accent-green);
+}
+
+/* --- Map Styling --- */
+.map-placeholder {
+    height: 400px;
+    background-color: #e0e0e0; /* Light gray background */
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.map-note {
+    position: absolute;
+    bottom: 15px;
+    color: var(--dark-text);
+    font-style: italic;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.map-text {
+    font-size: 1.5rem;
+    color: var(--dark-text);
+}
+
+.btn-contact {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: var(--dark-text);
+    color: var(--white);
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: var(--primary-color);
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack columns vertically on mobile/tablet */
+    }
+    .map-placeholder {
+        height: 300px; /* Shorter map placeholder on smaller screens */
+    }
+}

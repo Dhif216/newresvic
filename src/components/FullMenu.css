@@ -1,0 +1,133 @@
+.full-menu-section {
+    padding: 80px 40px;
+    background-color: var(--white); 
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 3.5rem;
+    color: var(--dark-text);
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.section-subheading {
+    font-size: 1.2rem;
+    color: var(--light-text);
+    margin-bottom: 50px;
+}
+
+/* --- Container for Categories (Two Main Columns) --- */
+.menu-container-wrap {
+    /* Two-column layout on large screens, stacks on small screens */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(400px, 1fr)); 
+    gap: 50px 80px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* --- Category Title --- */
+
+.category-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--dark-text);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- Small Image Thumbnail Style (200px) --- */
+.item-thumb {
+    flex-shrink: 0;
+    width: 200px; 
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%; 
+    margin-right: 25px; /* Increased margin for large image */
+    
+    /* FIX 1: Enhanced Border and Shadow for better visual shape */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); 
+    border: 5px solid var(--light-bg); /* Thicker border to frame the circle */
+    transition: all 0.3s ease;
+}
+
+.item-image-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Item Wrapper (Container for Image + Text) --- */
+.menu-item-wrapper {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px; 
+    background-color: var(--white); /* Base background is white */
+    border-radius: 12px; /* Smoother borders */
+    margin-bottom: 20px; 
+    transition: all 0.3s ease;
+    border: 1px solid transparent; /* Neutral starting border */
+}
+
+/* FIX 2: Hover Styles - Clean White/Orange Effect */
+.menu-item-wrapper:hover {
+    background-color: var(--light-bg); /* Light gray background on hover */
+    box-shadow: 0 0 10px rgba(255, 107, 53, 0.3); /* Subtle orange glow shadow */
+    border-color: var(--primary-color); /* Highlight border with primary color */
+}
+
+/* FIX 3: Ensure text color is consistently dark on hover */
+.menu-item-wrapper:hover .item-name,
+.menu-item-wrapper:hover .item-description-small {
+    color: var(--dark-text); 
+}
+
+/* FIX 4: Slight hover scale on the image */
+.menu-item-wrapper:hover .item-thumb {
+    transform: scale(1.03); 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+
+/* --- Item Details --- */
+.item-details {
+    flex-grow: 1;
+    padding-right: 20px;
+}
+
+.item-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--dark-text);
+}
+
+.item-description-small {
+    font-size: 0.9rem;
+    color: var(--light-text);
+    margin-top: 4px;
+}
+
+.item-price-small {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--primary-color); 
+    white-space: nowrap; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 950px) {
+    .menu-container-wrap {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+    }
+    .item-thumb {
+        width: 120px; /* Adjust large image size for smaller screens */
+        height: 120px;
+    }
+}

@@ -1,0 +1,113 @@
+.review-section {
+    padding: 80px 40px;
+    background-color: var(--light-bg); /* Use the lighter background */
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 3.5rem;
+    color: var(--dark-text);
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.section-subheading {
+    font-size: 1.2rem;
+    color: var(--light-text);
+    margin-bottom: 40px;
+}
+
+/* --- Average Rating Box --- */
+.average-rating-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.rating-score {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--accent-green);
+    margin-right: 20px;
+    line-height: 1;
+}
+
+.rating-details p {
+    color: var(--light-text);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* --- Stars Styling --- */
+.stars-container {
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+.stars-container .star-filled,
+.review-card .stars .star-filled {
+    color: gold;
+}
+.stars-container .star-empty,
+.review-card .stars .star-empty {
+    color: #ccc;
+}
+
+/* --- Reviews Grid/Carousel --- */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.review-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.review-author {
+    font-weight: 600;
+    color: var(--dark-text);
+}
+
+.review-text {
+    font-style: italic;
+    color: var(--light-text);
+    margin-bottom: 15px;
+}
+
+.google-source {
+    font-size: 0.8rem;
+    color: var(--accent-green);
+    font-weight: 500;
+}
+
+/* Loader */
+.loader {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    padding: 50px;
+}

@@ -1,0 +1,75 @@
+/* 1. Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* 2. Define Global CSS Variables (Your Color Palette) */
+:root {
+    --primary-color: #ff6b35; /* Victory Pizza Orange */
+    --secondary-color: #f7931e;
+    --dark-text: #1579a4;
+    --light-text: #666666;
+    --white: #ffffff;
+    --light-bg: #ffffff;
+    --accent-green: #4caf50;
+}
+
+/* 3. Global Resets and Base Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-text);
+    line-height: 1.2;
+}
+
+/* Base application container */
+.App {
+    min-height: 100vh;
+}
+
+/* --- Navigation Fixes: STICKY TRANSPARENT WRAPPER --- */
+
+/* 1. Wrapper: Makes the whole header float and allows mouse events to pass through */
+.sticky-nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50; /* Ensure it's above the Hero section */
+    
+    /* FIX: Allows clicks and scrolling on elements *behind* the header wrapper */
+    pointer-events: none; 
+}
+
+/* 2. Gooey Filter Container: Applies the blur and re-enables interaction */
+.goo-filter-wrap {
+    filter: url(#goo); 
+    
+    /* FIX: Center the container and let its width shrink to fit the content */
+    width: fit-content;
+    margin: 0 auto;
+    
+    /* Transparent Background with Subtle Blur (Glass effect) */
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(5px); 
+    
+    padding: 10px 20px; 
+    border-radius: 10px;
+    
+    /* FIX: Re-enable mouse interaction ONLY for the navigation component inside this wrapper */
+    pointer-events: auto;
+}
+section[id] {
+    scroll-margin-top: 150px; /* Adjust this value to be slightly more than your nav height */
+}
